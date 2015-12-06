@@ -12,6 +12,7 @@ import XMonad
 dpyName :: Display -> String
 dpyName dpy = map replace $ displayString dpy where
   replace ':' = '_'
+  replace '.' = '_'
   replace c = c
 
 inversionStatus :: Display -> Window -> X Bool
